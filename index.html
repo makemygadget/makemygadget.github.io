@@ -70,18 +70,27 @@
 <section class="dark" id="contacts"><div class="wrap"><div class="section-head reveal"><div class="eyebrow" style="color:#a5a5af">Мы рядом</div><h2>Пора вернуть технику к жизни.</h2><p>Приезжайте в сервис или свяжитесь с нами удобным способом.</p></div><div class="contact-grid"><div class="contact-box reveal"><h3>MakeMyGadget</h3><p><strong>Воронеж, ул. Никитинская, 23</strong><br>Контакт: Михаил<br>Ежедневно, 10:00–19:00<br><a href="tel:+79003010629">+7 (900) 301-06-29</a></p><div class="contact-actions"><a class="btn" href="tel:+79003010629">Позвонить ↗</a><a class="btn btn-outline" href="https://yandex.ru/maps/?text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%2C%20%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%2C%2023" target="_blank" rel="noopener noreferrer">Маршрут ↗</a></div></div><div class="contact-box reveal"><h3>Напишите нам</h3><p>Отправьте модель устройства и краткое описание проблемы — поможем разобраться со следующим шагом.</p><div class="contact-actions"><a class="btn" href="https://t.me/X3_Lab" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a class="btn btn-outline" href="https://vk.ru/officialmakemygadget" target="_blank" rel="noopener noreferrer">ВКонтакте ↗</a></div><p style="margin-top:22px"><a class="social-link" href="https://www.youtube.com/channel/UCd1D0HTsiQEodTvZ1TEFqtQ" target="_blank" rel="noopener noreferrer"><svg class="youtube-icon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><rect x="1" y="4" width="22" height="16" rx="5" fill="#ff0033"/><path d="M10 8l6 4-6 4z" fill="white"/></svg><span>Наш YouTube-канал ↗</span></a></p></div></div>
 <!-- MakeMyGadget: официальный виджет 2ГИС -->
 <style>
-#mmg-2gis{max-width:400px;margin:28px auto 0;padding:0;border:1px solid #35353a;border-radius:18px;background:#242428;color:#fff;overflow:hidden}
-#mmg-2gis>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;font-size:16px;font-weight:600;list-style:none}
-#mmg-2gis>summary::-webkit-details-marker{display:none}
-#mmg-2gis>summary::after{content:'+';font-size:24px;line-height:1;color:#a4a4ac}
-#mmg-2gis[open]>summary::after{content:'−'}
+.mmg-reviews-grid{display:grid;grid-template-columns:repeat(2,minmax(0,400px));gap:20px;justify-content:center;align-items:start;margin:28px auto 0}
+.mmg-yandex-content{display:flex;justify-content:center;padding:20px}
+@media(max-width:560px){.mmg-reviews-grid{grid-template-columns:minmax(0,400px)}}
+#mmg-2gis,#mmg-yandex{width:100%;min-width:0;margin:0;padding:0;border:1px solid #35353a;border-radius:18px;background:#242428;color:#fff;overflow:hidden}
+:is(#mmg-2gis,#mmg-yandex)>summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;font-size:16px;font-weight:600;list-style:none}
+:is(#mmg-2gis,#mmg-yandex)>summary::-webkit-details-marker{display:none}
+:is(#mmg-2gis,#mmg-yandex)>summary::after{content:'+';font-size:24px;line-height:1;color:#a4a4ac}
+:is(#mmg-2gis,#mmg-yandex)[open]>summary::after{content:'−'}
 #mmg-2gis .mmg-2gis-stage{position:relative;width:100%;overflow:hidden}
 #mmg-2gis iframe{position:absolute;top:0;left:0;display:block;width:528px;height:824px;border:0;transform-origin:top left}
 </style>
+<div class="mmg-reviews-grid">
 <details id="mmg-2gis">
 <summary>Отзывы в 2ГИС</summary>
 <div class="mmg-2gis-stage"><iframe id="big_dark_70000001059360611" title="Рейтинг и отзывы MakeMyGadget в 2ГИС" frameborder="0" width="528px" height="824px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"></iframe></div>
 </details>
+<details id="mmg-yandex">
+<summary>Отзывы на Яндекс Картах</summary>
+<div class="mmg-yandex-content"><iframe src="https://yandex.ru/sprav/widget/rating-badge/115933044001?type=rating&amp;theme=dark" title="Рейтинг MakeMyGadget на Яндекс Картах" width="150" height="50" frameborder="0" style="display:block;border:0" loading="lazy"></iframe></div>
+</details>
+</div>
 <script>
 (()=>{
 const panel=document.getElementById('mmg-2gis');
